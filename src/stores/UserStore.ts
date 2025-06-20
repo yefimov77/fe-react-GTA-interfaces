@@ -1,5 +1,3 @@
-// UserStore.ts
-
 import type { ICartItem } from '@lib/types';
 import { makeAutoObservable } from 'mobx';
 
@@ -9,6 +7,7 @@ export class UserStore {
   money = 200;
   cart: ICartItem[] = [];
   shopStore: ShopStore;
+  aceesLvl = 2;
 
   constructor(shopStore: ShopStore) {
     this.shopStore = shopStore;
@@ -17,17 +16,15 @@ export class UserStore {
 
   addToCart(itemId: number) {
     const shopItem = this.shopStore.getItemById(itemId);
-    if (!shopItem || shopItem.count <= 0) return; // no stock
+    if (!shopItem || shopItem.count <= 0) return;
 
     const cartItem = this.cart.find((c) => c.id === itemId);
     if (cartItem) {
-      // Increase quantity if stock allows
       if (cartItem.quantity < shopItem.count) {
         cartItem.quantity += 1;
         this.shopStore.reduceStock(itemId);
       }
     } else {
-      // Add new item with quantity 1
       this.cart.push({ ...shopItem, quantity: 1 });
       this.shopStore.reduceStock(itemId);
     }

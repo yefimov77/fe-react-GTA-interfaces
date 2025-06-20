@@ -1,4 +1,3 @@
-// stores/RootStoreContext.tsx
 import React from 'react';
 
 import { rootStore } from './RootStore';

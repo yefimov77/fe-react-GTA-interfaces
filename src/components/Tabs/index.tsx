@@ -1,9 +1,3 @@
-// import type { FC } from 'react';
-
-// import styles from './Rules.module.scss';
-// export const Rules: FC = () => {
-//   return <div className={styles.content}>hello </div>;
-// };
 import React, { useMemo, useState } from 'react';
 
 type TabData = {
@@ -25,7 +19,6 @@ export const SearchTabs: React.FC<SearchTabsProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTabId, setActiveTabId] = useState<string | null>(null);
 
-  // Filter tabs based on search & access rules
   const filteredTabs = useMemo(() => {
     const q = searchQuery.toLowerCase();
 
@@ -33,11 +26,9 @@ export const SearchTabs: React.FC<SearchTabsProps> = ({
       const canAccess = tab.accessLvl <= currentAccessLevel;
 
       if (!canAccess) {
-        // Always show disabled tabs, but don't search their content
         return true;
       }
 
-      // For enabled tabs, search title and content
       const titleMatch = tab.title.toLowerCase().includes(q);
       const contentMatch = tab.content.toLowerCase().includes(q);
 
@@ -45,14 +36,12 @@ export const SearchTabs: React.FC<SearchTabsProps> = ({
     });
   }, [tabs, searchQuery, currentAccessLevel]);
 
-  // If active tab is filtered out, reset active tab
   React.useEffect(() => {
     if (activeTabId && !filteredTabs.find((t) => t.id === activeTabId)) {
       setActiveTabId(null);
     }
   }, [filteredTabs, activeTabId]);
 
-  // If no active tab, set to first accessible tab
   React.useEffect(() => {
     if (!activeTabId) {
       const firstAccessible = filteredTabs.find(

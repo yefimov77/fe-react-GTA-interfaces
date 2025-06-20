@@ -1,4 +1,3 @@
-// ShopStore.ts
 import { SHOP_ITEMS } from '@lib/data/constants';
 import type { IShopItem } from '@lib/types';
 import { makeAutoObservable } from 'mobx';
