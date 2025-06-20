@@ -1,0 +1,19 @@
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.45);
+  border: none;
+  cursor: pointer;
+}

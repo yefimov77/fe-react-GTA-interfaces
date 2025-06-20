@@ -1,0 +1,5 @@
+.list {
+  width: 100%;
+  @include flex-column;
+  gap: 10px;
+}

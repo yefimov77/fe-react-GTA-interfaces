@@ -1,0 +1,12 @@
+.shopBox {
+  max-height: calc(100vh - 190px);
+
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  margin-bottom: 10px;
+}

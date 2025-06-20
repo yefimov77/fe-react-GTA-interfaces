@@ -1,0 +1,28 @@
+.header {
+  height: 134px;
+  padding-right: 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  border-bottom: 1px solid gray;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  gap: 98px;
+}
+
+.logo {
+  height: 51px;
+  width: 49px;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 600;
+}

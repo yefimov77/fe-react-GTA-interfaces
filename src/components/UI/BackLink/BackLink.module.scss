@@ -1,0 +1,29 @@
+.content {
+  @include flex;
+  gap: 20px;
+}
+
+.backLinkButton {
+  height: 44px;
+  width: 44px;
+
+  background-image: url('/header/backlink.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #00000073;
+
+  border: 1px solid #a6a6a6;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: border 0.3 ease;
+
+  &:hover {
+    background-image: url('/header/backlink-hover.svg');
+    border: 1px solid #6cbfb6;
+  }
+}
+
+.title {
+  @include nav-typography;
+}

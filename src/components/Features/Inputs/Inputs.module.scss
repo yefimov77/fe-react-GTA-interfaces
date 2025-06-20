@@ -1,0 +1,15 @@
+.page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.form {
+  @include flex-column;
+  width: 380px;
+  gap: 60px;
+}
+
+.inputsWrapper {
+  @include flex-column;
+  gap: 25px;
+}

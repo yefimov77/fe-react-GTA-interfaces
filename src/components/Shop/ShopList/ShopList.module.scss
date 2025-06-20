@@ -1,0 +1,23 @@
+.shopList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 230px);
+  gap: 30px;
+
+  @media (max-width: 1700px) {
+    grid-template-columns: repeat(4, 230px);
+  }
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, 230px);
+  }
+
+  @media (max-width: 1210px) {
+    grid-template-columns: repeat(2, 230px);
+  }
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(1, 230px);
+    width: 50%;
+  }
+}

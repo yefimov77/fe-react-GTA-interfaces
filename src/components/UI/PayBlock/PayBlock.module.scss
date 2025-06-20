@@ -1,0 +1,36 @@
+.payBlock {
+  @include flex-column;
+  gap: 15px;
+}
+
+.payBlockHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.payBlockDescription {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.payBlockPrice {
+  color: rgba(64, 135, 127, 1);
+}
+
+.payBlockFooter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.resetBtn {
+  background-color: #00000073;
+  cursor: pointer;
+  @include flex;
+  height: 70px;
+  width: 70px;
+  border: none;
+}

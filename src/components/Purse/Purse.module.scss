@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.textWrapper {
+  @include flex-column;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #a6a6a6;
+}
+
+.money {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: white;
+}

@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  max-width: 1920px;
+  min-width: 1024px;
+  padding: 0 60px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.bodySection {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
